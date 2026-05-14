@@ -8,7 +8,13 @@
 </script>
 
 <nav class="nav">
-  <a href="/" onclick={(e) => { e.preventDefault(); onNavigate('inicio'); }} class="brand">Luz y Gracia</a>
+  <a href="/" onclick={(e) => { e.preventDefault(); onNavigate('inicio'); }} class="brand">
+    Luz y Gracia
+    <svg class="logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="48" height="48" rx="8" fill="#fdf6e3"/>
+      <path d="M24 8C18 18 14 22 14 28a10 10 0 0 0 20 0c0-6-4-10-10-20zm0 26a4 4 0 0 1-4-4c0-3 2-5.5 4-8 2 2.5 4 5 4 8a4 4 0 0 1-4 4z" fill="#b58900"/>
+    </svg>
+  </a>
 
   <div class="links">
     {#each ['inicio', 'portafolio', 'contacto'] as page}
@@ -59,11 +65,19 @@
   }
 
   .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     font-size: 1.35rem;
     font-weight: 700;
     color: var(--text-em);
     text-decoration: none;
     letter-spacing: 0.02em;
+  }
+
+  .logo {
+    width: 28px;
+    height: 28px;
   }
 
   .links {
