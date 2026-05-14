@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let { photo, photos, onClose } = $props();
   let index = $derived(photos.indexOf(photo));
 
@@ -12,7 +12,7 @@
     photo = photos[i];
   }
 
-  function onKeydown(e) {
+  function onKeydown(e: KeyboardEvent) {
     if (e.key === 'Escape') onClose();
     if (e.key === 'ArrowLeft') prev();
     if (e.key === 'ArrowRight') next();

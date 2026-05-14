@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Nav from './lib/Nav.svelte';
   import Home from './lib/pages/Home.svelte';
   import Portfolio from './lib/pages/Portfolio.svelte';

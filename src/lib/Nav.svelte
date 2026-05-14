@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let { currentPage, onNavigate } = $props();
   let menuOpen = $state(false);
 

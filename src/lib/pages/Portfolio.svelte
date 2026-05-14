@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Lightbox from '../Lightbox.svelte';
 
   let photos = [
