@@ -36,7 +36,7 @@
     {#each photos as photo (photo.id)}
       <button class="card {photo.size}" onclick={() => openLightbox(photo)} aria-label="Ver foto">
         {#if photo.src}
-          <img src={photo.src} alt={photo.title} class="thumb" />
+          <img src={import.meta.env.BASE_URL + photo.src} alt={photo.title} class="thumb" />
         {:else}
           <div class="placeholder" style="background: {photo.color}">
             <span class="placeholder-label">{photo.category} {photo.id}</span>

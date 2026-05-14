@@ -28,7 +28,7 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <div class="lightbox" role="presentation" onclick={(e) => e.stopPropagation()}>
     {#if photo.src}
-      <img src={photo.src} alt={photo.title} class="image" />
+      <img src={import.meta.env.BASE_URL + photo.src} alt={photo.title} class="image" />
     {:else}
       <div class="placeholder-big" style="background: {photo.color}">
         <span>{photo.category} — Foto {photo.id}</span>
