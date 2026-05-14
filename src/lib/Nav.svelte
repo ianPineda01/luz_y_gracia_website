@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { currentPage, onNavigate } = $props();
+  let { currentPage, onNavigate }: { currentPage: string; onNavigate: (page: string) => void } = $props();
   let menuOpen = $state(false);
 
   function toggleMenu() {

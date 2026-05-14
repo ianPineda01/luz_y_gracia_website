@@ -1,5 +1,7 @@
 <script lang="ts">
-  let { photo, photos, onClose } = $props();
+  type Photo = { id: number; size: string; src: string; title?: string; color?: string; category?: string };
+
+  let { photo, photos, onClose }: { photo: Photo; photos: Photo[]; onClose: () => void } = $props();
   let index = $derived(photos.indexOf(photo));
 
   function prev() {

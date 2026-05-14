@@ -6,7 +6,7 @@
 
   let currentPage = $state('inicio');
 
-  function onNavigate(page) {
+  function onNavigate(page: string) {
     currentPage = page;
     window.location.hash = page === 'inicio' ? '' : page;
   }

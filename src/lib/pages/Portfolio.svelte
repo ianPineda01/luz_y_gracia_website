@@ -1,7 +1,9 @@
 <script lang="ts">
   import Lightbox from '../Lightbox.svelte';
 
-  let photos = [
+  type Photo = { id: number; size: string; src: string; title?: string; color?: string; category?: string };
+
+  let photos: Photo[] = [
     { id: 1,  size: 'large', src: '/portfolio/opt/B1_1.JPG' },
     { id: 2,  size: 'small', src: '/portfolio/opt/B1_2.JPG' },
     { id: 3,  size: 'wide', src: '/portfolio/opt/B1_3.JPG' },
@@ -17,9 +19,9 @@
     { id: 13, size: 'wide', src: '/portfolio/opt/XV_3.JPG' },
   ];
 
-  let lightboxPhoto = $state(null);
+  let lightboxPhoto: Photo | null = $state(null);
 
-  function openLightbox(photo) {
+  function openLightbox(photo: Photo) {
     lightboxPhoto = photo;
   }
 
@@ -60,9 +62,6 @@
     margin: 0 auto;
   }
 
-  h1 {
-    margin-bottom: 1.5rem;
-  }
 
   .grid {
     display: grid;
